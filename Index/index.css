@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #19232d; /* Color de fondo actualizado */
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background: #ffffff; /* Color de fondo actualizado */
+  transition: 0.25s linear;
+  z-index: 10;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.14);
+}
+
+nav.scrolled-down {
+  top: 0;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.14);
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+.links a {
+  color: #19232d;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #4f6886; /* Color de texto al pasar el mouse */
+  animation: shakeUpDown 0.5s ease infinite; /* Aplicar la animación al pasar el mouse */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agregar una sombra de color negro semitransparente */
+}
+@keyframes shakeUpDown {
+  0%, 100% {
+    transform: translateY(0); /* Estado inicial y final: no se aplica ninguna transformación */
+  }
+  50% {
+    transform: translateY(5px); /* En el punto medio de la animación, el texto se mueve hacia abajo */
+  }
+}
+
+nav img {
+  width: 34px;
+  height: 34px;
+  transform-origin: 0% 50%;
+  transition: 0.3s;
+}
+
+.container {
+  margin: 0 10%;
+  width: 80%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page {
+  padding-top: 20px;
+  background: #ffffff;
+}
+
+.color-block {
+  width: 100%;
+  height: auto; /* Permitir que la altura se ajuste automáticamente */
+  background-color: #ffffff;
+  color: #19232d;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Agregar posición relativa para posicionar el texto */
+  overflow: hidden; /* Evita que el contenido se desborde y lo recorta */
+
+}
+
+.color-block img {
+  max-width: 300%;
+  max-height: 100%;
+  height: auto; /* Permitimos que la altura de la imagen se ajuste automáticamente */
+  object-fit: cover;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agregar sombra al texto */
+
+}
+
+.overlay-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.overlay-text p {
+  font-size: 32px;
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .content img {
+    flex: 1 1 50%;
+    margin: 5px;
+  }
+}
+
+.menu-icon {
+  display: none; /* Por defecto oculto en pantallas grandes */
+}
+
+.hidden {
+  display: none;
+}
+
+.container-features{
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;
+  background-color: #ffffff; /* Color verde pastel */
+  border-bottom: 2px; /* Borde solo en la parte inferior */
+  border-radius: 0 0 20px 20px; /* Bordes redondeados solo en la parte inferior */
+  padding: 1%; /* Espaciado interno */
+  margin: 0 10%; /* Margen izquierdo y derecho del 10% */
+}
+
+
+.features {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que las características se envuelvan en varias líneas */
+  justify-content: space-between; /* Distribuir uniformemente las características */
+  margin-top: 20px;
+}
+
+.feature {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 48%; /* Ancho de cada característica por defecto */
+  margin-bottom: 20px; /* Espacio entre las características */
+  flex-basis: calc(48% - 20px); /* Restamos el espacio entre los elementos */
+}
+
+.feature a {
+  color: #19232d; /* Color blanco */
+  text-decoration: none;
+  display: flex; /* Usar flexbox para alinear ícono y texto */
+  align-items: center; /* Centrar verticalmente ícono y texto */
+}
+
+.feature i {
+  font-size: 36px;
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.feature span {
+  font-size: 16px; /* Tamaño de letra diferente */
+  margin-right: 20px; /* Ajustamos el margen inferior para agregar más espacio entre cada texto */
+}
+
+/* Cambio de tamaño al pasar el cursor */
+.feature:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agregar una sombra de color negro semitransparente */
+}
+
+/* Media Queries para diseño web responsive */
+@media screen and (min-width: 768px) {
+  .feature {
+    width: 23%; /* Ancho de cada característica en pantallas grandes */
+    flex-basis: calc(23% - 20px); /* Restamos el espacio entre los elementos */
+  }
+}
+
+/* Footer */
+#footer {
+  background-color: #ffffff;
+  color: #2c3e50;
+  padding: 50px 0;
+  text-align: center;
+  max-height: 20%; /* Altura máxima del 20% de la página */
+  text-align: left; /* Alineación del texto hacia la izquierda */
+}
+
+#footer p {
+  margin: 10px 0;
+}
+
+#footer a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#footer a:hover {
+  color: #4f6886;
+}
+
+.Logo-footer {
+  display: flex; /* Mostrar los elementos en línea */
+  align-items: center; /* Alinear verticalmente */
+  justify-content: space-between; /* Alinear los elementos con espacio entre ellos */
+}
+.Logo-footer img {
+  width: 60px; /* Ancho deseado de la imagen de la bandera */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+.flag img {
+  width: 30px; /* Ancho deseado de la imagen de la bandera */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+.flag {
+  font-size: 24px; /* Tamaño del texto */
+  color: #2c3e50; /* Color del texto */
+  display: flex; /* Mostrar los elementos en línea */
+  align-items: center; /* Alinear verticalmente */
+}
+
+.flag-icon {
+  margin-right: 5px; /* Espacio entre la imagen de la bandera y el texto */
+}
+
+#sitemap {
+  margin-bottom: 20px;
+}
+
+.links-footer {
+  margin-bottom: 20px;
+  text-align: center; /* Alineación del texto hacia la izquierda */
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+  margin-bottom: 20px;
+  text-align: center; /* Alineación del texto hacia la izquierda */
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #55575a;
+}
+
+.email-registration {
+  text-align: center; /* Alineación del texto hacia la izquierda */
+}
+/* Formulario de registro por correo electrónico */
+#email-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#email-form input[type="email"] {
+  width: 250px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.14);
+
+}
+
+#email-form button {
+  background-color: #4f6886;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#email-form button:hover {
+  background-color: #35495e;
+}
+/* Información de contacto */
+.contact-info {
+  margin-bottom: 20px;
+  text-align: center; /* Alineación del texto hacia la izquierda */
+}
+
+.copyright {
+  border-top: 1px solid #2c3e50; /* Línea superior */
+  margin-bottom: 20px;
+  text-align: center; /* Alineación del texto hacia la izquierda */
+}
+
+/* Otros estilos */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .links {
+    display: none; /* Ocultar los enlaces en pantallas pequeñas */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.14);
+  }
+
+  .links.show-links {
+    display: flex; /* Mostrar los enlaces cuando se agrega la clase .show-links */
+  }
+  
+  .menu-icon {
+    display: block; /* Mostrar el icono del menú en pantallas pequeñas */
+    cursor: pointer;
+  }
+
+  .menu-icon i {
+    font-size: 24px;
+    color: #19232d;
+  }
+}
+
+.container-why {
+  background-color: #f5f5f5; /* Gris muy claro */
+  padding: 20px;
+  margin-bottom: 30px;
+  margin: 0 auto; /* Márgenes automáticos para centrar */
+  border-radius: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column-reverse; /* Ordenar las columnas para pantallas pequeñas */
+  align-items: center; /* Centrar los elementos horizontalmente */
+
+}
+
+.image-why {
+  max-width: 100%; /* Establecer un ancho máximo para la imagen */
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-why img {
+  max-width: 100%; /* Asegurar que la imagen no exceda el ancho del contenedor */
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-why {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start; /* Alinea este contenedor a la izquierda */
+}
+
+.text-why h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text-why p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.order-button-why {
+  background-color: #4f6886;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.5s ease;
+  align-self: flex-end; /* Alinea este botón a la derecha */
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.14);
+}
+
+.order-button-why:hover {
+  background-color: #35495e;
+  transform: scale(1.5);
+}
+
+/* Media Queries para diseño web responsive */
+@media screen and (min-width: 768px) {
+  .content {
+    flex-direction: row; /* Ordenar las columnas para pantallas grandes */
+    align-items: center;
+  }
+
+  .image-why {
+    width: 200px; /* Ancho de la imagen en pantallas grandes */
+    height: auto;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+.container-uso-w,
+.container-uso-g {
+  display: flex;
+  background-color: #ffffff; /* Blanco para container-uso-w */
+}
+
+.container-uso-g {
+  background-color: #f5f5f5; /* Gris claro para container-uso-g */
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-container {
+  width: 30%; /* Tamaño máximo del 30% del contenedor */
+  max-width: 200px; /* Máximo tamaño de la imagen */
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
+  border-radius: 10px;
+  overflow: hidden; /* Evita que las imágenes se desborden */
+}
+
+.image-container img {
+  width: 100%; /* Ajusta la imagen al 100% del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+.text-container {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.text-container h2 {
+  margin-bottom: 10px;
+}
+
+.text-container p {
+  margin-bottom: 0;
+}
+
+/* Media Query para hacerlo responsive */
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: row; /* Cambia la dirección a row para pantallas pequeñas */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    justify-content: space-between; /* Espacio entre los elementos */
+  }
+
+  .image-container {
+    width: 30%; /* Ocupa el 30% del ancho en pantallas pequeñas */
+    max-width: none; /* Elimina el máximo ancho */
+    margin-bottom: 20px; /* Espacio entre las imágenes */
+  }
+
+  .text-container {
+    width: 60%; /* Ocupa el 60% del ancho en pantallas pequeñas */
+    margin-left: 0; /* Elimina el margen izquierdo */
+  }
+}
+
+/* Estilo base del título */
+.animacion-disponible {
+  text-align: center;
+}
+
+#animal-title, .disponible {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff; /* Color blanco */
+  text-align: center;
+  margin-top: 50px; /* Espacio superior para separar del resto del contenido */
+}
+#animal-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #eeff00;
+  text-align: center;
+  margin-top: 50px; /* Espacio superior para separar del resto del contenido */
+}
+
+
+/* Clase para la animación de borrado */
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+/* Clase para la animación de aparición */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Animación de borrado */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

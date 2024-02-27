@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicio</title>
+  <link rel="stylesheet" href="service.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="app-left">
+      <button class="close-menu">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="app-logo">
+        <img src="rj.png" alt="app-logo">
+        <span>RJ</span>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-list-item active">
+          <a class="nav-list-link" href="#">
+            <i class="fas fa-home"></i> Inicio
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="fas fa-box"></i> Productos
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="fas fa-th"></i> Aplicaciones
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="fas fa-cog"></i> Configuración
+          </a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#">
+            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+          </a>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="app-main">
+      <div class="main-header-line">
+        <h1>Centro de Control</h1>
+        <div class="action-buttons">
+          <button class="menu-button">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="chart-row three">
+        <div class="chart-container-wrapper">
+          <div class="chart-container">
+            <div class="chart-info-wrapper">
+              <h2>Aplicaciones</h2>
+              <span>RJ</span>
+            </div>
+          </div>
+        </div>
+        <div class="chart-container-wrapper">
+          <div class="chart-container">
+            <div class="chart-info-wrapper">
+              <h2>Preseleccionado</h2>
+              <span>RJ</span>
+            </div>
+          </div>
+        </div>
+        <div class="chart-container-wrapper">
+          <div class="chart-container">
+            <div class="chart-info-wrapper">
+              <h2>En espera</h2>
+              <span>RJ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-row two">
+        <div class="chart-container-wrapper big">
+          <div class="chart-container">
+            <div class="chart-container-header">
+              <h2> Dispositivos Activos</h2>
+            </div>
+          </div>
+        </div>
+        <div class="chart-container-wrapper small">
+          <div class="chart-container">
+            <div class="chart-container-header">
+              <h2>Adquisiciones</h2>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app-right">
+      <button class="close-right">
+        <i class="fas fa-times-circle"></i>
+      </button>
+      <div class="profile-box">
+        <div class="profile-photo-wrapper">
+          <img src="rj.png" alt="perfil">
+        </div>
+        <p class="profile-text">RJ</p>
+        <p class="profile-subtext">Ingeniero Electronico</p>
+      </div>
+      <div class="app-right-content">
+        <div class="app-right-section">
+          <div class="app-right-section-header">
+            <h2>Mensajes</h2>
+            <span class="notification-active">
+              <i class="fas fa-comment"></i>
+            </span>
+          </div>
+          <div class="message-line">
+            <i class="fas fa-user"></i>
+            </div>
+          </div>
+          <div class="message-line">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="message-line">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <div class="app-right-section">
+          <div class="app-right-section-header">
+            <h2>Actividad</h2>
+            <span class="notification-active">
+              <i class="fas fa-bell"></i>
+            </span>
+          </div>
+          <div class="activity-line">
+            <i class="fas fa-exclamation-triangle activity-icon warning"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="servicescript.js"></script>
+</body>
+</html>
